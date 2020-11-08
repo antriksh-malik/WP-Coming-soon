@@ -1,0 +1,230 @@
+/*@import 'https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:400';*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*body {*/
+
+/*    overflow: hidden;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    background: #141E30 linear-gradient(to right, #24243e, #141E30, #0f0c29);*/
+/*}*/
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg) center no-repeat;
+    background-size: cover;
+    margin: 0;
+    overflow:hidden;
+}
+
+div.absolute-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: all .5s;
+}
+
+h3, h5 {
+    padding: 10px 30px 10px 30px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px 0 black;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+span#close {
+    position: absolute;
+    top: -15px;
+    left: -30px;
+
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 5px black;
+
+    cursor: pointer;
+}
+
+canvas {
+//border: 2px solid;
+}
+
+/*====================================================================================================================*/
+
+/*====================================================================================================================*/
+
+h2 {
+    position: relative;
+    font-size: 3.7rem;
+    color: transparent;
+    white-space: nowrap;
+    transform: skew(-10deg);
+    display: inline-block;
+    background-color: white;
+}
+h2 .glitch1,
+h2 .glitch2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+h2::before,
+h2::after,
+h2 .glitch2::before,
+h2 .glitch2::after,
+h2 .glitch1::before,
+h2 .glitch1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+h2 .glitch2::before {
+    color: cyan;
+    animation: trans4 3.2s infinite;
+    z-index: -1;
+    clip-path: inset(62% 0 0 0);
+}
+h2 .glitch2::after {
+    color: magenta;
+    animation: trans5 3.2s infinite;
+    z-index: -1;
+    clip-path: inset(62% 0 0 0);
+}
+h2::before {
+    clip-path: inset(0 0 43% 0);
+    animation: trans6 3.2s infinite;
+    color: black;
+}
+h2::after {
+    clip-path: inset(62% 0 0 0);
+}
+h2 .glitch1::before {
+    clip-path: inset(57% 0 42% 0);
+    animation: trans2 .8s steps(1, start) infinite;
+    animation-fill-mode: both;
+    animation-delay: 0.2s;
+    color: black;
+}
+h2 .glitch1::after {
+    clip-path: inset(58% 0 38% 0);
+    animation: trans1 .8s steps(1, start) infinite;
+    animation-fill-mode: both;
+    color: black;
+}
+
+@keyframes trans1 {
+    0% {
+        transform: translateX(-1%);
+    }
+    20% {
+        transform: translateX(0.5%);
+    }
+    40% {
+        transform: translateX(-0.2%);
+    }
+    60% {
+        transform: translateX(0.6%);
+    }
+    90% {
+        transform: translateX(0.8%);
+    }
+    100% {
+        transform: translateX(-1%);
+    }
+}
+@keyframes trans2 {
+    0% {
+        transform: translateX(5%);
+    }
+    20% {
+        transform: translateX(2.5%);
+    }
+    55% {
+        transform: translateX(1.8%);
+    }
+    60% {
+        transform: translateX(2.6%);
+    }
+    80% {
+        transform: translateX(2.8%);
+    }
+    100% {
+        transform: translateX(3%);
+    }
+}
+@keyframes trans3 {
+    0% {
+        transform: translateX(1%);
+    }
+    20% {
+        transform: translateX(1.1%);
+    }
+    45% {
+        transform: translateX(1.2%);
+    }
+    70% {
+        transform: translateX(1.4%);
+    }
+    90% {
+        transform: translateX(0.6%);
+    }
+    100% {
+        transform: translateX(1.2%);
+    }
+}
+@keyframes trans4 {
+    0% {
+        transform: translateX(0%);
+    }
+    60% {
+        transform: translateX(0.5%);
+    }
+    60.001% {
+        transform: translateX(0.3%);
+    }
+    100% {
+        transform: translateX(0.2%);
+    }
+}
+@keyframes trans5 {
+    0% {
+        transform: translateX(0%);
+    }
+    60% {
+        transform: translateX(-0.5%);
+    }
+    60.001% {
+        transform: translateX(-0.3%);
+    }
+    100% {
+        transform: translateX(-0.2%);
+    }
+}
+@keyframes trans6 {
+    0% {
+        transform: translateX(0.6%);
+    }
+    60% {
+        transform: translateX(1.1%);
+    }
+    60.001% {
+        transform: translateX(0.9%);
+    }
+    100% {
+        transform: translateX(1.2%);
+    }
+}
